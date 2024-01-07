@@ -1,0 +1,28 @@
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    background-color: #343a40; 
+    padding: 15px;
+    height: 100%;
+    color: #fff; 
+    font-size: 20px;
+}
+
+.sidebar a {
+    color: #fff; 
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+    padding: 8px 15px; 
+    border-radius: 4px;
+    margin-right: -15px;
+}
+
+.sidebar a:hover {
+    color: #fff; 
+}
+
+.sidebar a.active {
+    background-color: #fff; 
+    color: #000; 
+    border-radius: 5px 0 0 5px;
+}

@@ -1,0 +1,7 @@
+.activeFilter {
+    color: #fff;
+}
+
+.not-active {
+    color: black !important
+}
