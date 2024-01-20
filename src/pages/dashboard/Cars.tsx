@@ -26,7 +26,7 @@ const Cars = () => {
   };
 
   const handleCloseModal = () => {
-    setShowModal(false);
+    setShowModal(false);    
   };
 
   const getButtonVariant = (isActive: boolean) =>
@@ -45,7 +45,11 @@ const Cars = () => {
 
         console.log(token);
 
-        const response = await axios.get(api);
+        const response = await axios.get(api, {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        });
         const data = response.data;
         setFoundCars(data);
       } catch (err) {
@@ -60,7 +64,8 @@ const Cars = () => {
     };
 
     fetchData();
-  }, []);
+  }, []);  
+  
 
   const handleFilter = (selectedFilter: string | null) => {
     setFilter(selectedFilter);
